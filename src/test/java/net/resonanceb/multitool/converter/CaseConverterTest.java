@@ -1,6 +1,7 @@
 package net.resonanceb.multitool.converter;
 
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
@@ -22,6 +23,7 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toLowerCamel(UPPER_CAMEL), is(LOWER_CAMEL));
         assertThat(CaseConverter.toLowerCamel(UPPER_HYPHEN), is(LOWER_CAMEL));
         assertThat(CaseConverter.toLowerCamel(UPPER_UNDERSCORE), is(LOWER_CAMEL));
+        assertNull(CaseConverter.toLowerCamel(null));
     }
 
     @Test
@@ -32,6 +34,7 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toLowerHyphen(UPPER_CAMEL), is(LOWER_HYPHEN));
         assertThat(CaseConverter.toLowerHyphen(UPPER_HYPHEN), is(LOWER_HYPHEN));
         assertThat(CaseConverter.toLowerHyphen(UPPER_UNDERSCORE), is(LOWER_HYPHEN));
+        assertNull(CaseConverter.toLowerHyphen(null));
     }
 
     @Test
@@ -42,6 +45,7 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toLowerUnderscore(UPPER_CAMEL), is(LOWER_UNDERSCORE));
         assertThat(CaseConverter.toLowerUnderscore(UPPER_HYPHEN), is(LOWER_UNDERSCORE));
         assertThat(CaseConverter.toLowerUnderscore(UPPER_UNDERSCORE), is(LOWER_UNDERSCORE));
+        assertNull(CaseConverter.toLowerUnderscore(null));
     }
 
     @Test
@@ -52,6 +56,7 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toUpperCamel(UPPER_CAMEL), is(UPPER_CAMEL));
         assertThat(CaseConverter.toUpperCamel(UPPER_HYPHEN), is(UPPER_CAMEL));
         assertThat(CaseConverter.toUpperCamel(UPPER_UNDERSCORE), is(UPPER_CAMEL));
+        assertNull(CaseConverter.toUpperCamel(null));
     }
 
     @Test
@@ -62,6 +67,7 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toUpperHyphen(UPPER_CAMEL), is(UPPER_HYPHEN));
         assertThat(CaseConverter.toUpperHyphen(UPPER_HYPHEN), is(UPPER_HYPHEN));
         assertThat(CaseConverter.toUpperHyphen(UPPER_UNDERSCORE), is(UPPER_HYPHEN));
+        assertNull(CaseConverter.toUpperHyphen(null));
     }
 
     @Test
@@ -72,5 +78,6 @@ public class CaseConverterTest {
         assertThat(CaseConverter.toUpperUnderscore(UPPER_CAMEL), is(UPPER_UNDERSCORE));
         assertThat(CaseConverter.toUpperUnderscore(UPPER_HYPHEN), is(UPPER_UNDERSCORE));
         assertThat(CaseConverter.toUpperUnderscore(UPPER_UNDERSCORE), is(UPPER_UNDERSCORE));
+        assertNull(CaseConverter.toUpperUnderscore(null));
     }
 }
