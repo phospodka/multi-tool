@@ -26,12 +26,12 @@ import java.util.regex.Pattern;
  */
 public class CaseConverter {
 
-    private static final Pattern LOWER_CAMEL_PATTERN = Pattern.compile("^[a-z][a-zA-Z0-9]+$");
-    private static final Pattern LOWER_HYPHEN_PATTERN = Pattern.compile("^[a-z]+(?:-[a-z]+)*$");
-    private static final Pattern LOWER_UNDERSCORE_PATTERN = Pattern.compile("^[a-z]+(?:_[a-z]+)*$");
-    private static final Pattern UPPER_CAMEL_PATTERN = Pattern.compile("[A-Z][a-zA-Z0-9]+");
-    private static final Pattern UPPER_HYPHEN_PATTERN = Pattern.compile("^[A-Z]+(?:-[A-Z]+)*$");
-    private static final Pattern UPPER_UNDERSCORE_PATTERN = Pattern.compile("^[A-Z]+(?:_[A-Z]+)*$");
+    private static final Pattern LOWER_CAMEL_PATTERN = Pattern.compile("^[a-z0-9][a-zA-Z0-9]+$");
+    private static final Pattern LOWER_HYPHEN_PATTERN = Pattern.compile("^[a-z0-9]+(?:-[a-z0-9]+)*$");
+    private static final Pattern LOWER_UNDERSCORE_PATTERN = Pattern.compile("^[a-z0-9]+(?:_[a-z0-9]+)*$");
+    private static final Pattern UPPER_CAMEL_PATTERN = Pattern.compile("[A-Z0-9][a-zA-Z0-9]+");
+    private static final Pattern UPPER_HYPHEN_PATTERN = Pattern.compile("^[A-Z0-9]+(?:-[A-Z0-9]+)*$");
+    private static final Pattern UPPER_UNDERSCORE_PATTERN = Pattern.compile("^[A-Z0-9]+(?:_[A-Z0-9]+)*$");
 
     private static final Function<String, String> LH_TO_LC = CaseFormat.LOWER_HYPHEN.converterTo(CaseFormat.LOWER_CAMEL);
     private static final Function<String, String> LU_TO_LC = CaseFormat.LOWER_UNDERSCORE.converterTo(CaseFormat.LOWER_CAMEL);
