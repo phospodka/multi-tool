@@ -6,9 +6,6 @@
 .idea
 *.iml
 
-# gradlew things until I use them
-gradlew*
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
